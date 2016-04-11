@@ -29,9 +29,7 @@ module.exports = function(app){
         request({
             uri: requestedUrl,
             resolveWithFullResponse: true,
-            headers: {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
-            }
+            headers:  req.headers
         })
         .then(originResponse => {
             setHeaders(res, originResponse);
