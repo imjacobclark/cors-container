@@ -33,7 +33,7 @@ module.exports = function(app){
         }        
         if(!parsedRequestUrl.host) {
             res.status(400);
-            res.send("Invalid Url '" + requestedUrl + "'"));
+            res.send("Invalid Url '" + requestedUrl + "'");
             return
         }
         
